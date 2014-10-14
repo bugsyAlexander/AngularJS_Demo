@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en" ng-app="myApp">
 	<head>
 		<meta charset="utf-8"/>
 		<title>Angular Demo</title>
@@ -9,11 +9,16 @@
 		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
 		<script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
 
+
+		<script type="text/javascript" src="js/controllers.js"></script>
 		<link rel="stylesheet" type="text/css" media="all" href="css/style.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 	</head>
 	<body>
-		
+		<div ng-controller="MyController">
+			<h1>{{author.name}}</h1>
+			<p>{{author.title + ", " + author.company}}</p>
+		</div>
 	</body>
 </html>
