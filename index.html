@@ -16,9 +16,35 @@
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 	</head>
 	<body>
+
+		<div class="search">
+			<h1>Artist Directory</h1>
+			<label>Search</label>
+			<input ng-model="query" placeholder="Search for artists" autofocus>
+
+			<label class="formgroup">by:
+				<select ng-model="artistOrder">
+					<option value="name">Name</option>
+					<option value="reknown">Reknown</option>
+				</select> <!-- artistOrder -->
+			</label><!-- formgroup -->
+		
+
+			<label class="formgroup">
+				<input type="radio" ng-model="direction" name="direction" checked>
+				ascending
+			</label> <!-- label ascending -->
+
+			<label class="formgroup">
+				<input type="radio" ng-model="direction" name="direction" value="reverse">
+				descending
+			</label> <!-- label decending -->
+		</div> <!-- search -->
+
+
 		<div class="main" ng-controller="MyController">
 			<ul class="artistlist">
-				<li class="artist cf" ng-repeat="item in artists">
+				<li class="artist cf" ng-repeat="item in artists | filter : query | orderBy : artistOrder:direction">
 				<!-- <li class="artist cf" ng-repeat="item in artists | limitTo : 5"> -->
 					<img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
 					<div class="info">
@@ -26,9 +52,10 @@
 						<!-- filter example -->
 						<!-- <h2>{{item.name | uppercase}}</h2> -->
 						<h3>{{item.reknown}}</h3>
-					</div>
-				</li>
-			</ul>
-		</div>
+					</div> <!-- info -->
+				</li> <!-- li artistCF -->
+			</ul> <!-- ul artistList -->
+		</div> <!-- main ng-controller -->
+
 	</body>
 </html>
