@@ -1,0 +1,43 @@
+<section class="artistpage">
+
+	<div class="search">
+		<h1>Artist Directory</h1>
+		<label>search</label>
+		<input type="text" ng-model="query" placeholder="Search for artists" autofocus>
+
+		<label class="formgroup">by:
+			<select ng-model="artistOrder">
+				<option value="name">Name</option>
+				<option value="reknown">Reknown</option>
+			</select>
+		</label> <!-- formgroupBy -->
+
+		<label class="formgroup">
+			<input type="radio" ng-model="direction" name="direction" checked>
+			ascending
+		</label> <!-- formgroup -->
+
+		<label class="formgroup">
+			<input type="radio" ng-model="direction" name="direction" value="reverse">
+			descending
+		</label>
+	</div> <!-- search -->
+
+		<ul class="artistlist">
+		<!-- <ul class="artistlist" ng-show="query"> -->
+		<!-- to hide list uncomment ng-show example -->
+			<!-- <li class="artist cf" ng-repeat="item in artists | limitTo : 5"> -->
+			<li ng-animate="'animate'" class="artist cf" ng-repeat="item in artists | filter : query | orderBy : artistOrder:direction">
+
+				<a href="#/details/{{artists.indexOf(item)}}">
+					<img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+					<div class="info">
+						<h2>{{item.name}}</h2>
+						<h3>{{item.reknown}}</h3>
+					</div> <!-- info -->
+				</a><!-- second partial -->
+				
+			</li> 
+		</ul> <!-- artistlist -->
+
+</section> <!-- artistpage -->

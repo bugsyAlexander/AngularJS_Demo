@@ -53,8 +53,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; 
-}
+  box-sizing: border-box; }
+
 
 /* Base Styles */
 
@@ -315,4 +315,18 @@ a.small {
   width: 40%;
   max-width: 130px;
   border-radius: 20px;
+}
+
+.artist.ng-enter.ng-enter-active,
+.artist.ng-leave {
+  opacity: 1;
+  height: 80px;
+  overflow: hidden;
+}
+
+.artist.ng-leave.ng-leave-active,
+.artist.ng-enter {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
