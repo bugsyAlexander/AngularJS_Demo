@@ -6,7 +6,7 @@ Very basic example of building a Artist Directory
 
 ---
 
-![Angular App Demo](images/app-screen-shot-1.png)
+![Angular App Demo](images/app-screen-shot.png)
 
 Includes:
 - AngularJS
