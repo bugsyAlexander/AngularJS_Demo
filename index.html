@@ -3,10 +3,27 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Angular Demo</title>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<!-- <script type="text/javascript" src="lib/angular/angular.min.js"></script> -->
+
+  <!-- Font
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" media="all" href="css/style.css"/>
+
+  <!-- JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
 		<script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
 		<script type="text/javascript" src="lib/angular/angular-animate.min.js"></script>
@@ -14,12 +31,27 @@
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/controllers.js"></script>
 
-		<link rel="stylesheet" type="text/css" media="all" href="css/style.css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 	</head>
 	<body>
 
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <section class="menu-section">
+    <nav id="social-menu" class="social-menu menu" role="navigation">
+      <ul>
+        <li><a href="http://mynoralexander.com/?utm_source=github&utm_medium=ng-demo&utm_campaign=angular-demo-app" target="_blank" title="Mynor Alexanders website"></a></li>
+        <li><a href="https://twitter.com/bugsyAlexander" target="_blank" title="Twitter"><span class="screen-reader-text">Twitter</span></a></li>
+        <li><a href="https://github.com/bugsyAlexander" target="_blank" title="Github"><span class="screen-reader-text">Github</span></a></li>
+        <li><a href="https://www.linkedin.com/pub/mynor-alexander/5b/943/877" target="_blank" title="LinkedIn"><span class="screen-reader-text">LinkedIn</span></a></li>
+      </ul>
+    </nav>
+    <!-- .social-menu -->
+  </section>
+  <!-- .menu-section -->
+
+
+  <!-- Angular Video
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="main" ng-view></div> <!-- ng-view -->
 
 	</body>
